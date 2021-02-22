@@ -24,11 +24,6 @@ a {
     box-sizing: border-box;
 }
 
-#hero {
-    height: 75vh;
-    background-color: #FAFAFA;
-}
-
 header{
     left: 0;
     position: absolute;
@@ -43,87 +38,23 @@ header{
     height: 80px;
 }
 
-.hero-info{
-    padding-top: 100px;
-}
-
 .header-logo {
     width: 65px;
     height: auto;
 }
 
-.hero-img-container {
-    height: 100%;
-    width: auto;
-    max-height: 66vh;
+.nav-items svg {
+    width: 20px;
+    margin-right: 0.3rem;
 }
 
-.hero-img-container-mobile{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-.hero-img-container-mobile div{
-    position: relative;
-    margin-top: auto;
-    max-height: 40vh;
+.nav-link {
+    color: var(--primary);
 }
 
-.hero-img-mobile {
-    width: auto !important;
-    min-width: auto !important;
-    margin-right: 0px !important;
-    margin-bottom: 0px !important;
+.nav-link:hover {
+    color: var(--complementary);
 }
-
-.hero-img {
-    width: auto !important;
-    min-width: auto !important;
-}
-
-@media (max-width:1280px) {
-    .hero-img-container {
-        max-height: 60vh;
-    }
-}
-
-
-@media (max-width:767px) {
-    #hero {
-        background-image: url(/images/onda-rosa2.svg);
-        background-repeat: no-repeat;
-        background-position-x: right;
-        background-size: contain;
-    }
-
-    #hero {
-        height: 630px;
-    }
-    
-}
-
-@media (max-width:370px) {
-    #hero {
-        background-image: url(/images/onda-rosa2.svg);
-        background-repeat: no-repeat;
-        background-position-x: right;
-        background-size: contain;
-    }
-
-    #hero {
-        height: 480px;
-    }
-    
-}
-
-.pink-background {
-    background-image: url('/images/pink-bg.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-
 
 .color-primary {
     color: var(--primary);
@@ -142,6 +73,127 @@ header{
     background-color: var(--complementary-light);
     color: white;
 }
+
+#presentation {
+    height: 75vh;
+    background-color: #FAFAFA;
+}
+
+
+.presentation-text{
+    padding-top: 100px;
+}
+
+.presentation-text-margin{
+    margin-right: 35px;
+    margin-left: 35px;
+    margin-top: -100px
+}
+
+.presentation-img-container {
+    height: 100%;
+    width: auto;
+    max-height: 63vh;
+}
+
+.presentation-img-container-mobile{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.presentation-img-container-mobile div{
+    position: relative;
+    margin-top: auto;
+    max-height: 320px;
+}
+
+.presentation-img-mobile {
+    width: auto !important;
+    min-width: auto !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.presentation-img {
+    width: auto !important;
+    min-width: auto !important;
+}
+
+.presentation-title{
+    font-size: clamp(1.9rem, 6vw, 3rem);
+}
+
+.presentation-subtitle{
+    font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+}
+
+@media (max-width:1280px) {
+    .presentation-img-container {
+        max-height: 60vh;
+    }
+}
+
+@media (max-width:767px) {
+    #presentation {
+        background-image: url(/images/onda-rosa2.svg);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-size: contain;
+        height: 630px;
+    }
+
+    .presentation-text-margin{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width:370px) {
+    #presentation {
+        background-image: url(/images/onda-rosa2.svg);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-size: contain;
+        height: 480px;
+    }
+
+    .presentation-text-margin{
+        margin-top: -90px
+    }
+
+    .presentation-img-container-mobile div{
+        max-height: 220px;
+    }
+}
+
+@media (max-width:320px) {
+    .presentation-title{
+        font-size: clamp(1.7rem, 6vw, 3rem);
+    }
+    
+    .presentation-subtitle{
+        font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    }
+}
+
+
+
+.pink-background {
+    background-image: url('/images/pink-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.cta {
+    transition: all 0.6s ease-in-out;
+}
+
+.cta:hover {
+    background-color: var(--complementary-dark);
+}
+
 
 .colored-line {
     width: 60px;
@@ -162,53 +214,5 @@ header{
     margin-left: auto;
 }
 
-.nav-items svg {
-    width: 20px;
-    margin-right: 0.3rem;
-}
 
-.nav-link {
-    color: var(--primary);
-}
 
-.nav-link:hover {
-    color: var(--complementary);
-}
-
-.cta {
-    transition: all 0.6s ease-in-out;
-}
-
-.cta:hover {
-    background-color: var(--complementary-dark);
-}
-
-.hero-title{
-    font-size: clamp(1.9rem, 6vw, 3rem);
-}
-
-.hero-subtitle{
-    font-size: clamp(1.3rem, 2.5vw, 1.6rem);
-}
-
-.hero-title-margin{
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-top: -100px
-}
-
-@media (max-width:370px) {
-    .hero-title-margin{
-        margin-top: -90px
-    }
-    
-}
-@media (max-width:320px) {
-    .hero-title{
-        font-size: clamp(1.7rem, 6vw, 3rem);
-    }
-    
-    .hero-subtitle{
-        font-size: clamp(1.1rem, 2.5vw, 1.6rem);
-    }
-}
