@@ -4,6 +4,7 @@ interface ServiceCardProps {
     children: any;
     title:string
     image: string;
+    imageAlt:string
 }
 
 export function ServiceCard(props:ServiceCardProps) {
@@ -11,7 +12,7 @@ export function ServiceCard(props:ServiceCardProps) {
     return (
         <div className="rounded-2xl p-6 shadow-md bg-white mb-16 md:mb-0">
             <div className=" service-card-img">
-                <Image src={props.image} alt="Chapeu de graduação"
+                <Image src={props.image} alt={props.imageAlt}
                     className="w-full h-auto" width={600} height={525}></Image>
             </div>
             <div className="text-center mt-9">

@@ -236,3 +236,8 @@ a {
     margin-right: auto;
     margin-left: auto;
 }
+
+#about{
+    background-color: var(--complementary-light);
+}
+

@@ -42,7 +42,7 @@ export default function Home() {
               <ul
                 className="nav-items flex items-center justify-between text-base text-gray-700  font-bold">
                 <li><a className="nav-link lg:p-4 py-3 px-0 hidden md:block border-b-2 border-transparent mx-2"
-                  href="#">Sobre mim</a></li>
+                  href="#about">Sobre mim</a></li>
                 <li><a className="nav-link lg:p-4 py-3 px-0 block border-b-2 border-transparent mx-3 "
                   href="#services">Serviços</a></li>
                 <li>
@@ -75,7 +75,7 @@ export default function Home() {
           </div>
           <div className="presentation-img-container-mobile">
             <div className=" flex md:hidden z">
-              <Image src="/images/brenda-mobile.png" className="presentation-img-mobile" alt="Brenda Fernanda" width={317} height={618} priority={true} quality={100} />
+              <Image src="/images/brenda-mobile.png" className="presentation-img-mobile" alt="Brenda Fernanda" width={317} height={618} priority={false} quality={100} />
             </div>
           </div>
 
@@ -83,14 +83,14 @@ export default function Home() {
         <div className="w-0 md:w-2/5 h-full flex pink-background">
           <div className="w-full items-end hidden md:flex">
             <div className="mx-auto presentation-img-container flex">
-              <Image src="/images/brenda.png" className="presentation-img" alt="Brenda Fernanda" width={317} height={618} priority={true} quality={100} />
+              <Image src="/images/brenda.png" className="presentation-img" alt="Brenda Fernanda" width={317} height={618} priority={false} quality={100} />
             </div>
           </div>
         </div>
 
       </section>
 
-      <section id="services" className="w-full flex antialiased flex flex-col  items-center justify-center my-8 xm:my-10 my:md-12 lg:my-20">
+      <section id="services" className="w-full flex antialiased flex flex-col  items-center justify-center py-8 xm:py-10 my:pd-12 lg:py-20">
 
         <div className="w-full mb-4 md:mb-16 text-center  items-center justify-center flex">
           <span className="colored-line mr-3"></span>
@@ -101,7 +101,7 @@ export default function Home() {
 
         <div className="w-11/12 lg:w-9/12  xxl:w-3/5 grid grid-cols-1 md:grid-cols-3 gap-8 service-grid font-medium color-primary mb-3 md:mb-20">
 
-          <ServiceCard title={'Atendimento\nPresencial'} image="/images/services/atendimento-presencial.png">
+          <ServiceCard title={'Atendimento\nPresencial'} image="/images/services/atendimento-presencial.png" imageAlt="Psicóloga atendendo uma criança">
             <p className=" mt-9">
               Atendimento psicoterápico presencial para crianças e adolescentes, visa a restaurar a saúde mental e promover desenvolvimento saudável.
             </p>
@@ -115,7 +115,7 @@ export default function Home() {
             </div>
           </ServiceCard>
 
-          <ServiceCard title={'Atendimento\nOnline'} image="/images/services/atendimento-online.png">
+          <ServiceCard title={'Atendimento\nOnline'} image="/images/services/atendimento-online.png" imageAlt="Chamada de vídeo">
             <div className=" mt-9">
               <p className="inline">
                 Realizado via celular ou computador, não há necessidade de deslocamento. Atendimento a&nbsp;
@@ -129,8 +129,8 @@ export default function Home() {
             </p>
           </ServiceCard>
 
-          <ServiceCard title={'Atendimento\nSocial'} image="/images/services/atendimento-social.png">
-          <p className=" mt-9">
+          <ServiceCard title={'Atendimento\nSocial'} image="/images/services/atendimento-social.png" imageAlt="Duas pessoas conversando sentadas">
+            <p className=" mt-9">
               Visa atender pessoas com renda mais baixa que não podem pagar o valor completo da sessão. Pode ser no formato presencial ou online.
               </p>
             <div className=" mt-6">
@@ -142,6 +142,31 @@ export default function Home() {
 
         </div>
 
+
+      </section>
+
+
+      <section id="about" className="w-full flex antialiased flex items-center justify-center py-8 xm:py-10 my:pd-12 lg:py-16">
+        <div className="w-11/12 lg:w-9/12 xxl:w-3/5 flex">
+          <div className="flex w-2/6 items-center justify-center mr-6">
+            <Image src="/images/about/brenda.png" alt="Rosto de Brenda"
+              className="w-full h-auto" width={342} height={319} quality="100"></Image>
+          </div>
+          <div className="flex flex-col w-4/6 ">
+
+            <div className=" ">
+              <h4 className="section-title font-extrabold color-primary">Sobre mim</h4>
+            </div>
+
+            <div className="font-medium text-primary mt-6 text-lg">
+              <p>Me chamo Brenda Fernanda, sou Psicóloga Clínica (CRP 03/21079), graduada pela Universidade Federal de Sergipe (UFS) e Mestre em Psicologia pela mesma instituição.
+             </p>
+              <p className=" mt-6">
+                Atualmente faço formação em Gestalt-Terapia Infantojuvenil, e meu principal objetivo enquanto psicoterapeuta é promover saúde para crianças e adolescentes!
+              </p>
+            </div>
+          </div>
+        </div>
 
       </section>
     </div>
