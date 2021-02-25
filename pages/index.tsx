@@ -165,7 +165,7 @@ export default function Home() {
 
             </div>
 
-            <div className="font-medium text-primary mt-6 text-lg">
+            <div className="font-medium mt-6 text-lg">
               <p>Me chamo Brenda Fernanda, sou Psicóloga Clínica (CRP 03/21079), graduada pela Universidade Federal de Sergipe (UFS) e Mestre em Psicologia pela mesma instituição.
              </p>
               <p className=" mt-6">

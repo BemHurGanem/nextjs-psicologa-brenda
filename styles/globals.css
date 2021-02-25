@@ -207,12 +207,12 @@ a {
 }
 
 .section-title{
-    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-size: clamp(1.7rem, 3vw, 3vw);
 }
 
 @media (max-width:320px) {
     .section-title{
-        font-size: clamp(1.4rem, 6vw, 3rem);
+        font-size: clamp(1.4rem, 3vw, 3rem);
     }
 }
 
