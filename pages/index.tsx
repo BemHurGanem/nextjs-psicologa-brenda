@@ -101,7 +101,7 @@ export default function Home() {
 
         <div className="w-11/12 lg:w-9/12  xxl:w-3/5 grid grid-cols-1 md:grid-cols-3 gap-8 service-grid font-medium color-primary mb-3 md:mb-20">
 
-          <ServiceCard title={'Atendimento\nPresencial'} image="/images/services/atendimento-presencial.png" imageAlt="Psicóloga atendendo uma criança">
+          <ServiceCard title_1={'Atendimento'} title_2={'Presencial'} image="/images/services/atendimento-presencial.png" imageAlt="Psicóloga atendendo uma criança">
             <p className=" mt-9">
               Atendimento psicoterápico presencial para crianças e adolescentes, visa a restaurar a saúde mental e promover desenvolvimento saudável.
             </p>
@@ -115,7 +115,7 @@ export default function Home() {
             </div>
           </ServiceCard>
 
-          <ServiceCard title={'Atendimento\nOnline'} image="/images/services/atendimento-online.png" imageAlt="Chamada de vídeo">
+          <ServiceCard title_1={'Atendimento'} title_2={'Online'} image="/images/services/atendimento-online.png" imageAlt="Chamada de vídeo">
             <div className=" mt-9">
               <p className="inline">
                 Realizado via celular ou computador, não há necessidade de deslocamento. Atendimento a&nbsp;
@@ -129,7 +129,7 @@ export default function Home() {
             </p>
           </ServiceCard>
 
-          <ServiceCard title={'Atendimento\nSocial'} image="/images/services/atendimento-social.png" imageAlt="Duas pessoas conversando sentadas">
+          <ServiceCard title_1={'Atendimento'} title_2={'Social'} image="/images/services/atendimento-social.png" imageAlt="Duas pessoas conversando sentadas">
             <p className=" mt-9">
               Visa atender pessoas com renda mais baixa que não podem pagar o valor completo da sessão. Pode ser no formato presencial ou online.
               </p>
@@ -146,16 +146,23 @@ export default function Home() {
       </section>
 
 
-      <section id="about" className="w-full flex antialiased flex items-center justify-center py-8 xm:py-10 my:pd-12 lg:py-16">
+      <section id="about" className="w-full flex antialiased flex items-center justify-center py-8 xm:py-10 my:pd-12 lg:py-16 px-4">
         <div className="w-11/12 lg:w-9/12 xxl:w-3/5 flex">
-          <div className="flex w-2/6 items-center justify-center mr-6">
+          <div className="hidden md:flex w-2/6 items-center justify-center mr-6">
             <Image src="/images/about/brenda.png" alt="Rosto de Brenda"
-              className="w-full h-auto" width={342} height={319} quality="100"></Image>
+              className=" w-full h-auto" width={342} height={319} quality="100"></Image>
           </div>
-          <div className="flex flex-col w-4/6 ">
+          <div className="flex flex-col w-full md:w-4/6 ">
 
-            <div className=" ">
-              <h4 className="section-title font-extrabold color-primary">Sobre mim</h4>
+            <div className="flex">
+              <div className="flex md:hidden w-2/6 items-center justify-center">
+                <Image src="/images/about/brenda.png" alt="Rosto de Brenda"
+                  className="w-full h-auto" width={342} height={319} quality="100"></Image>
+              </div>
+              <div className="flex w-4/6 md:w-full items-center ml-2 md:ml-0">
+                <h4 className="section-title font-extrabold color-primary">Sobre mim</h4>
+              </div>
+
             </div>
 
             <div className="font-medium text-primary mt-6 text-lg">

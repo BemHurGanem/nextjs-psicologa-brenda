@@ -2,7 +2,8 @@ import Image from 'next/image'
 
 interface ServiceCardProps {
     children: any;
-    title:string
+    title_1:string
+    title_2:string
     image: string;
     imageAlt:string
 }
@@ -16,19 +17,9 @@ export function ServiceCard(props:ServiceCardProps) {
                     className="w-full h-auto" width={600} height={525}></Image>
             </div>
             <div className="text-center mt-9">
-                <h5 className="font-bold color-primary text-2xl">{props.title}</h5>
+                <h5 className="font-bold color-primary text-2xl" >{props.title_1}<br></br>{props.title_2}</h5>
             </div>
-            <p className=" mt-9">
-                Atendimento psicoterápico presencial para crianças e adolescentes, visa a restaurar a saúde mental e promover desenvolvimento saudável.
-          </p>
-            <div className=" mt-6">
-                <p className="inline">
-                    Atendimentos em&nbsp;
-        </p>
-                <p className="inline font-bold color-complementary">
-                    Vitória da Conquista - BA.
-        </p>
-            </div>
+            {props.children}
         </div>
 
     );
