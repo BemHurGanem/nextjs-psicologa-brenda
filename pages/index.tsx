@@ -23,7 +23,7 @@ export async function getStaticProps(context) {
     console.log("Login succeeded")
     // request photos for a specific instagram user
     const instagram = await client.getPhotosByUsername({
-      username: "brendafernandapsi",
+      username: "bemhurganem",
       first: 3
     })
     console.log(instagram)
