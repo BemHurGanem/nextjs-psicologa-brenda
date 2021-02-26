@@ -15,6 +15,8 @@ export async function getStaticProps(context) {
     password: process.env.IG_PASS,
   })
   let posts = []
+  console.log(process.env.IG_LOGIN);
+  console.log(process.env.IG_USERNAME);
   try {
     await client.login()
     // request photos for a specific instagram user
