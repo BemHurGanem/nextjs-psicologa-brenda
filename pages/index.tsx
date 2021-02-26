@@ -17,13 +17,16 @@ export async function getStaticProps(context) {
   let posts = []
   console.log(process.env.IG_LOGIN);
   console.log(process.env.IG_USERNAME);
+  console.log(process.env.IG_PASS);
   try {
-    await client.login()
+    await client.login();
+    console.log("Login succeeded")
     // request photos for a specific instagram user
     const instagram = await client.getPhotosByUsername({
       username: process.env.IG_USERNAME,
       first: 3
     })
+    console.log(instagram)
     if (instagram["user"]["edge_owner_to_timeline_media"]["count"] > 0) {
       // if we receive timeline data back
       //  update the posts to be equal
