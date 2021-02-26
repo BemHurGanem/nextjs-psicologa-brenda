@@ -5,11 +5,48 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import React, { useEffect, useState } from 'react';
 import { ServiceCard } from '../components/ServiceCard';
+import Instagram from "instagram-web-api"
+import { InstagramFeed } from '../components/InstagramFeed';
 
-export default function Home() {
+
+export async function getStaticProps(context) {
+  const client = new Instagram({
+    username: process.env.IG_LOGIN,
+    password: process.env.IG_PASS,
+  })
+  let posts = []
+  try {
+    await client.login()
+    // request photos for a specific instagram user
+    const instagram = await client.getPhotosByUsername({
+      username: process.env.IG_USERNAME,
+      first: 3
+    })
+    if (instagram["user"]["edge_owner_to_timeline_media"]["count"] > 0) {
+      // if we receive timeline data back
+      //  update the posts to be equal
+      // to the edges that were returned from the instagram API response
+      posts = instagram["user"]["edge_owner_to_timeline_media"]["edges"]
+    }
+  } catch (err) {
+    console.log(
+      "Something went wrong while fetching content from Instagram",
+      err
+    )
+  }
+  return {
+    props: {
+      instagramPosts: posts, // returns either [] or the edges returned from the Instagram API based on the response from the `getPhotosByUsername` API call
+    },
+    revalidate: 86400
+  }
+}
+
+
+export default function Home({ instagramPosts }) {
 
   const [navbarClass, setNavbarClass] = useState(false);
-
+  // console.log(instagramPosts)
   useEffect(function onFirstMount() {
     function changeNavBarOnScroll() {
       setNavbarClass(window.scrollY >= 80);
@@ -83,7 +120,7 @@ export default function Home() {
         <div className="w-0 md:w-2/5 h-full flex pink-background">
           <div className="w-full items-end hidden md:flex">
             <div className="mx-auto presentation-img-container flex">
-              <Image src="/images/brenda.png" className="presentation-img" alt="Brenda Fernanda" width={317} height={618} priority={false} quality={100} />
+              <Image src="/images/brenda.png" className="presentation-img" alt="Brenda Fernanda" width={317} height={618} priority={false} quality={100} loading="eager" />
             </div>
           </div>
         </div>
@@ -175,6 +212,10 @@ export default function Home() {
           </div>
         </div>
 
+      </section>
+
+      <section id="instagramfeed" className="w-full flex antialiased flex flex-col items-center justify-center py-8 xm:py-10 md:pd-12 lg:py-16 xxl:py-28 px-4">
+        <InstagramFeed instagramPosts={instagramPosts} ></InstagramFeed>
       </section>
     </div>
   )

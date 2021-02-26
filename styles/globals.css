@@ -53,6 +53,7 @@ a {
 }
 
 .nav-link {
+    cursor: pointer;
     color: var(--primary);
 }
 
@@ -241,3 +242,7 @@ a {
     background-color: var(--complementary-light);
 }
 
+
+#instagramfeed{
+
+}
