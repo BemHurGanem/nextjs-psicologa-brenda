@@ -14,6 +14,7 @@ body {
     --complementary: #E97F83;
     --complementary-light: #FEE2E1;
     --complementary-dark: #e2565b;
+    --background-color: #FAFAFA;
 }
 
 a {
@@ -25,7 +26,7 @@ a {
     box-sizing: border-box;
 }
 
-.navbar{
+.navbar {
     left: 0;
     position: absolute;
     width: 100%;
@@ -38,7 +39,7 @@ a {
     height: 80px;
 }
 
-.active{
+.active {
     background-color: white;
 }
 
@@ -84,12 +85,11 @@ a {
     background-color: #FAFAFA;
 }
 
-
-.presentation-text{
+.presentation-text {
     padding-top: 100px;
 }
 
-.presentation-text-margin{
+.presentation-text-margin {
     margin-right: 35px;
     margin-left: 35px;
     margin-top: -100px
@@ -101,13 +101,13 @@ a {
     max-height: 63vh;
 }
 
-.presentation-img-container-mobile{
+.presentation-img-container-mobile {
     position: absolute;
     right: 0;
     bottom: 0;
 }
 
-.presentation-img-container-mobile div{
+.presentation-img-container-mobile div {
     position: relative;
     margin-top: auto;
     max-height: 320px;
@@ -125,12 +125,12 @@ a {
     min-width: auto !important;
 }
 
-.presentation-title{
+.presentation-title {
     font-size: clamp(1.9rem, 3vw, 3vw);
 }
 
-.presentation-subtitle{
-    font-size: clamp(1.3rem, 1.5vw,1.5rem);
+.presentation-subtitle {
+    font-size: clamp(1.3rem, 1.5vw, 1.5rem);
 }
 
 @media (max-width:1280px) {
@@ -147,8 +147,7 @@ a {
         background-size: contain;
         height: 630px;
     }
-
-    .presentation-text-margin{
+    .presentation-text-margin {
         margin-right: 20px;
         margin-left: 20px;
     }
@@ -162,34 +161,28 @@ a {
         background-size: contain;
         height: 480px;
     }
-
-    .presentation-text-margin{
+    .presentation-text-margin {
         margin-top: -90px
     }
-
-    .presentation-img-container-mobile div{
+    .presentation-img-container-mobile div {
         max-height: 220px;
     }
 }
 
 @media (max-width:320px) {
-    .presentation-title{
+    .presentation-title {
         font-size: clamp(1.7rem, 6vw, 3rem);
     }
-    
-    .presentation-subtitle{
+    .presentation-subtitle {
         font-size: clamp(1.1rem, 2.5vw, 1.6rem);
     }
 }
-
-
 
 .pink-background {
     background-image: url(/images/large-presentation-waves.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 
 .cta {
     transition: all 0.6s ease-in-out;
@@ -199,7 +192,6 @@ a {
     background-color: var(--complementary-dark);
 }
 
-
 #services {
     background-image: url(/images/services/background-waves.svg);
     background-repeat: no-repeat;
@@ -207,12 +199,12 @@ a {
     background-size: contain;
 }
 
-.section-title{
+.section-title {
     font-size: clamp(1.9rem, 3vw, 3rem);
 }
 
 @media (max-width:320px) {
-    .section-title{
+    .section-title {
         font-size: clamp(1.4rem, 3vw, 3rem);
     }
 }
@@ -222,9 +214,7 @@ a {
     background-color: var(--complementary);
     border-radius: 30px;
     width: clamp(40px, 55px, 70px);
-
 }
-
 
 .service-grid {
     margin-top: 110px;
@@ -238,11 +228,34 @@ a {
     margin-left: auto;
 }
 
-#about{
+#about {
     background-color: var(--complementary-light);
 }
 
+#instagramfeed {}
 
-#instagramfeed{
+.instagram-card img {
+    transition: all .4s ease-in-out;
+}
 
+.instagram-card:hover img {
+    border-radius: 30px;
+}
+
+.modal {
+    transition: opacity 1s ease;
+}
+
+.modal a svg {
+    width: 20px;
+    margin-right: 0.5rem;
+}
+
+.modal a {
+    cursor: pointer;
+    background-color: var(--complementary);
+}
+
+.modal a:hover {
+    background-color: var(--complementary-dark);
 }

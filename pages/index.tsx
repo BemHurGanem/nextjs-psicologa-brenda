@@ -5,9 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import React, { useEffect, useState } from 'react';
 import { ServiceCard } from '../components/ServiceCard';
-import Instagram from "instagram-web-api"
 import { InstagramFeed } from '../components/InstagramFeed';
-import { IgApiClient } from 'instagram-private-api';
+import { ContactModal } from '../components/ContactModal';
 
 
 export async function getStaticProps(context) {
@@ -32,6 +31,8 @@ export async function getStaticProps(context) {
 export default function Home({ instagramPosts }) {
 
   const [navbarClass, setNavbarClass] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
   // console.log(instagramPosts)
   useEffect(function onFirstMount() {
     function changeNavBarOnScroll() {
@@ -45,6 +46,10 @@ export default function Home({ instagramPosts }) {
     }
   }, []);
 
+  function openContactModal(){
+    setModalOpen(true);
+  }
+
   return (
     <div className="w-screen antialiased">
       <Head>
@@ -53,7 +58,7 @@ export default function Home({ instagramPosts }) {
       </Head>
 
 
-      <header className={(navbarClass ? 'active' : '') + ' navbar lg:px-16 px-6 flex flex-wrap items-center fixed w-full z-50'}>
+      <header className={(navbarClass ? 'active' : '') + ' navbar lg:px-16 px-6 flex flex-wrap items-center fixed w-full z-40'}>
         <div className="flex-1 flex justify-between items-center">
           <a href="">
             <Image src="/images/logo.png" className="header-logo" width={70} height={70} priority={true} />
@@ -69,8 +74,8 @@ export default function Home({ instagramPosts }) {
                 <li><a className="nav-link lg:p-4 py-3 px-0 block border-b-2 border-transparent mx-3 "
                   href="#services">Serviços</a></li>
                 <li>
-                  <a className="cta flex font-normal  py-3 px-5  block border-b-2 border-transparent bg-complementary rounded-full "
-                    href="#"><FontAwesomeIcon icon={faWhatsapp} size="sm" /> Whatsapp</a>
+                  <a onClick={openContactModal} className="cta flex font-normal  py-3 px-5  block border-b-2 border-transparent bg-complementary rounded-full  focus:outline-none"
+                    >Vamos conversar</a>
                 </li>
               </ul>
             </nav>
@@ -91,7 +96,7 @@ export default function Home({ instagramPosts }) {
               <h1 className=" color-complementary mt-1 md:inline presentation-title">Adolescentes</h1>
             </div>
             <div className="text-base xl:text-xl mt-9 xm:mt-12">
-              <button className="cta bg-complementary rounded-full  px-6 py-3 presentation-text-margin">
+              <button className="cta bg-complementary rounded-full  px-6 py-3 presentation-text-margin focus:outline-none" onClick={openContactModal}>
                 Entre em contato
               </button>
             </div>
@@ -203,6 +208,12 @@ export default function Home({ instagramPosts }) {
       <section id="instagramfeed" className="w-full flex antialiased flex flex-col items-center justify-center py-8 xm:py-10 md:pd-12 lg:py-16 xxl:py-28 px-4">
         <InstagramFeed instagramPosts={instagramPosts} ></InstagramFeed>
       </section>
+
+      <ContactModal modalOpen={modalOpen} setModalOpen={setModalOpen}></ContactModal>
+
     </div>
+
   )
 }
+
+

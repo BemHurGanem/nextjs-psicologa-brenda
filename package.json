@@ -13,8 +13,6 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "autoprefixer": "^10.2.4",
-    "instagram-private-api": "^1.43.3",
-    "instagram-web-api": "^2.2.2",
     "next": "10.0.7",
     "postcss": "^8.2.6",
     "react": "17.0.1",
