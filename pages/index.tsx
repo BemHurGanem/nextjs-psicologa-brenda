@@ -7,47 +7,28 @@ import React, { useEffect, useState } from 'react';
 import { ServiceCard } from '../components/ServiceCard';
 import Instagram from "instagram-web-api"
 import { InstagramFeed } from '../components/InstagramFeed';
+import { IgApiClient } from 'instagram-private-api';
 
 
 export async function getStaticProps(context) {
-  const client = new Instagram({
-    username: process.env.IG_LOGIN,
-    password: process.env.IG_PASS,
-  })
-  let posts = []
-  console.log(process.env.IG_LOGIN);
-  console.log(process.env.IG_USERNAME);
-  console.log(process.env.IG_PASS);
-  try {
-    await client.login();
-    console.log("Login succeeded")
-    // request photos for a specific instagram user
-    const instagram = await client.getPhotosByUsername({
-      username: "bemhurganem",
-      first: 3
-    })
-    console.log(instagram)
-    if (instagram["user"]["edge_owner_to_timeline_media"]["count"] > 0) {
-      // if we receive timeline data back
-      //  update the posts to be equal
-      // to the edges that were returned from the instagram API response
-      posts = instagram["user"]["edge_owner_to_timeline_media"]["edges"]
-    }
-  } catch (err) {
-    console.log(
-      "Something went wrong while fetching content from Instagram",
-      err
-    )
-  }
+
+  const url = `https://www.instagram.com/graphql/query/?query_hash=003056d32c2554def87228bc3fd9668a&variables={%22id%22:%2218137662785%22,%22first%22:3,%22after%22:%22%22}`
+
+  const res = await fetch(url)
+  const json = await res.json();
+
+  const posts = json.data.user.edge_owner_to_timeline_media.edges;
+
+  // console.log(posts);
+
   return {
     props: {
-      instagramPosts: posts, // returns either [] or the edges returned from the Instagram API based on the response from the `getPhotosByUsername` API call
+      instagramPosts: posts
     },
     revalidate: 86400
   }
+
 }
-
-
 export default function Home({ instagramPosts }) {
 
   const [navbarClass, setNavbarClass] = useState(false);
