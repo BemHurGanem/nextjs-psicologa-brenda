@@ -5,9 +5,11 @@ export function InstagramFeed({ instagramPosts }) {
 
     return (
         <>
-            <div className="w-11/12 lg:w-9/12  xxl:w-3/5 mb-4 md:mb-9 xxl:mb-16 items-center flex">
-                <a target="blank" href="https://www.instagram.com/brendafernandapsi/"><h4 className="section-title font-extrabold nav-link"> Me siga no Instagram</h4></a>
-                <span className="colored-line ml-3"></span>
+            <div className="w-11/12 lg:w-9/12 mt-9 md:mt-5 xxl:mt-0 xxl:w-3/5 mb-16 md:items-center flex flex-col md:flex-row">
+                <a target="blank" href="https://www.instagram.com/brendafernandapsi/">
+                    <h4 className="section-title font-extrabold nav-link"> Me siga no Instagram</h4>
+                </a>
+                <span className="colored-line hidden md:flex md:ml-3"></span>
             </div>
 
             <div className="w-11/12 lg:w-9/12  xxl:w-3/5 grid grid-cols-1 md:grid-cols-3 gap-8  font-medium color-primary mb-3 md:mb-20">
@@ -16,7 +18,7 @@ export function InstagramFeed({ instagramPosts }) {
                 {instagramPosts.map(({ node }, i) => {
                     return (
 
-                        <div className="instagram-card mb-16 md:mb-0" key={i}>
+                        <div className="instagram-card mb-0" key={i}>
                             <a
                                 href={`https://www.instagram.com/p/${node.shortcode}`}
                                 key={i}

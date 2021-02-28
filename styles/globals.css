@@ -66,6 +66,10 @@ a {
     color: var(--primary);
 }
 
+.color-white {
+    color: #FAFAFA
+}
+
 .color-complementary {
     color: var(--complementary);
 }
@@ -258,4 +262,13 @@ a {
 
 .modal a:hover {
     background-color: var(--complementary-dark);
+}
+
+#rodape {
+    background-color: var(--primary);
+    border-top-right-radius: 5rem;
+}
+
+#rodape svg{
+    width: 0.75rem;
 }

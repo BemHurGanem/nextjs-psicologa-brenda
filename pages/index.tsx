@@ -2,7 +2,7 @@ import Head from 'next/head'
 import "tailwindcss/tailwind.css";
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import React, { useEffect, useState } from 'react';
 import { ServiceCard } from '../components/ServiceCard';
 import { InstagramFeed } from '../components/InstagramFeed';
@@ -46,12 +46,12 @@ export default function Home({ instagramPosts }) {
     }
   }, []);
 
-  function openContactModal(){
+  function openContactModal() {
     setModalOpen(true);
   }
 
   return (
-    <div className="w-screen antialiased">
+    <div className=" antialiased">
       <Head>
         <title>Brenda Fernanda - Psicóloga</title>
         <link rel="icon" href="/favicon.ico" />
@@ -75,7 +75,7 @@ export default function Home({ instagramPosts }) {
                   href="#services">Serviços</a></li>
                 <li>
                   <a onClick={openContactModal} className="cta flex font-normal  py-3 px-5  block border-b-2 border-transparent bg-complementary rounded-full  focus:outline-none"
-                    >Vamos conversar</a>
+                  >Vamos conversar</a>
                 </li>
               </ul>
             </nav>
@@ -118,7 +118,7 @@ export default function Home({ instagramPosts }) {
 
       </section>
 
-      <section id="services" className="w-full flex antialiased flex flex-col  items-center justify-center py-8 xm:py-10 my:pd-12 lg:py-20">
+      <section id="services" className="w-full flex antialiased flex-col  items-center justify-center py-8 xm:py-10 my:pd-12 lg:py-20">
 
         <div className="w-full mb-4 md:mb-16 text-center  items-center justify-center flex">
           <span className="colored-line mr-3"></span>
@@ -174,7 +174,7 @@ export default function Home({ instagramPosts }) {
       </section>
 
 
-      <section id="about" className="w-full flex antialiased flex items-center justify-center py-8 xm:py-10 my:pd-12 lg:py-16 px-4">
+      <section id="about" className="w-full flex antialiased  items-center justify-center py-8 xm:py-10 my:pd-12 lg:py-16 px-4">
         <div className="w-11/12 lg:w-9/12 xxl:w-3/5 flex">
           <div className="hidden md:flex w-2/6 items-center justify-center mr-6">
             <Image src="/images/about/brenda.png" alt="Rosto de Brenda"
@@ -205,8 +205,27 @@ export default function Home({ instagramPosts }) {
 
       </section>
 
-      <section id="instagramfeed" className="w-full flex antialiased flex flex-col items-center justify-center py-8 xm:py-10 md:pd-12 lg:py-16 xxl:py-28 px-4">
+      <section id="instagramfeed" className="w-full  antialiased flex flex-col items-center justify-center py-8 xm:py-10 md:pd-12 lg:py-16 xxl:py-28 px-4">
         <InstagramFeed instagramPosts={instagramPosts} ></InstagramFeed>
+      </section>
+
+
+      <section id="rodape" className="antialiased flex flex-col md:flex-row items-center justify-center  py-8 xm:py-10 md:pd-12 lg:py-16 xxl:py-20 px-4 mr-6 xl:mr-16 2xl:py-28">
+        <div className="flex flex-col md:w-5/12 xxl:w-4/12 mx-5 md:mx-0">
+          <h4 className="section-title font-extrabold color-white">Tem alguma dúvida?</h4>
+          <p className="color-white font-medium mt-4">Entre em contato para saber mais sobre locais <br className="hidden xxl:inline"></br> de atendimento, agenda e preços.</p>
+        </div>
+        <div className="flex flex-col md:w-6/12 xxl:w-5/12 justify-center items-center mt-10 xl:mt-0">
+          <div className="flex flex-col justify-center items-end">
+            <a onClick={openContactModal} className="cta  text-xl font-medium  text-center  py-5 px-10  block border-b-2 border-transparent bg-complementary rounded-full  focus:outline-none"
+            >Vamos conversar</a>
+            <div className="flex mt-4 justify-center items-center">
+              <span className="colored-line flex mr-2 w-10"></span>
+              <p className="color-white font-medium text-xs">Feito  <FontAwesomeIcon icon={faHeart} size="sm" className="inline" /> em Vitória da Conquista</p>
+            </div>
+          </div>
+
+        </div>
       </section>
 
       <ContactModal modalOpen={modalOpen} setModalOpen={setModalOpen}></ContactModal>

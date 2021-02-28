@@ -2,6 +2,7 @@ import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from 'next/image'
 
 interface ServiceCardProps {
     modalOpen: boolean;
@@ -37,7 +38,8 @@ export function ContactModal({ modalOpen, setModalOpen }: ServiceCardProps) {
                         <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                             <div className="flex flex-col items-center justify-center w-9/12 lg:w-4/6 mx-auto mb-4">
 
-                                <img src="/images/contact/contact.svg"></img>
+                                {/* <img src="/images/contact/contact.svg"></img> */}
+                                <Image src="/images/contact/contact.svg" className="" alt="Animação de pessoas conversando" width={310} height={310} loading="eager" />
 
                                 <a target="_blank" href="https://api.whatsapp.com/send?phone=5577991653808&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia!"   className=" mt-4 group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2 ">
                                 <FontAwesomeIcon icon={faWhatsapp} size="sm" />
