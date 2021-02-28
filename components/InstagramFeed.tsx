@@ -16,27 +16,21 @@ export function InstagramFeed({ instagramPosts }) {
                 {instagramPosts.map(({ node }, i) => {
                     return (
 
-                        <div className="instagram-card  mb-16 md:mb-0" key={i}>
+                        <div className="instagram-card mb-16 md:mb-0" key={i}>
                             <a
                                 href={`https://www.instagram.com/p/${node.shortcode}`}
                                 key={i}
                                 aria-label="view image on Instagram"
                             >
-                                <Image src={node.thumbnail_src}
-                                    alt={
-                                        node.edge_media_to_caption.edges[0].node.text
-                                            .replace(/(#\w+)+/g, "")
-                                            .trim()
-                                    }
-                                    width={640} height={640}></Image>
-                                {/* <img
+
+                                <img
                                     src={node.thumbnail_src}
                                     alt={
                                         node.edge_media_to_caption.edges[0].node.text
                                             .replace(/(#\w+)+/g, "")
                                             .trim()
-                                    } */}
-                                {/* /> */}
+                                    }
+                                 /> 
                             </a>
                         </div>
                     )
