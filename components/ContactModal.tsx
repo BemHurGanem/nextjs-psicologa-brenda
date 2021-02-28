@@ -43,7 +43,7 @@ export function ContactModal({ modalOpen, setModalOpen }: ServiceCardProps) {
                                 <FontAwesomeIcon icon={faWhatsapp} size="sm" />
                                     Whatsapp
                                 </a>
-                                <a target="_blank" href="tel:+5577991653808"  className=" mt-4 group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2 ">
+                                <a target="_blank" href="tel:77991653808"  className=" mt-4 group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2 ">
                                 <FontAwesomeIcon icon={faPhoneAlt} size="sm" />
                                     Ligue 
                                 </a>
