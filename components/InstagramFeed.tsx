@@ -5,11 +5,11 @@ export function InstagramFeed({ instagramPosts }) {
 
     return (
         <>
-            <div className="w-11/12 lg:w-9/12 mt-9 md:mt-5 xxl:mt-0 xxl:w-3/5 mb-16 md:items-center flex flex-col md:flex-row">
+            <div className="w-11/12 lg:w-9/12 mt-9 md:mt-5 xxl:mt-0 xxl:w-3/5 mb-16 items-center flex flex-row">
                 <a target="blank" href="https://www.instagram.com/brendafernandapsi/">
                     <h4 className="section-title font-extrabold nav-link"> Me siga no Instagram</h4>
                 </a>
-                <span className="colored-line hidden md:flex md:ml-3"></span>
+                <span className="colored-line flex ml-1 md:ml-3"></span>
             </div>
 
             <div className="w-11/12 lg:w-9/12  xxl:w-3/5 grid grid-cols-1 md:grid-cols-3 gap-8  font-medium color-primary mb-3 md:mb-20">

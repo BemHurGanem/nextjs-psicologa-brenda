@@ -53,15 +53,23 @@ export default function Home({ instagramPosts }) {
   return (
     <div className=" antialiased">
       <Head>
-        <title>Brenda Fernanda - Psicóloga</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Brenda Fernanda - Psicóloga de Crianças e Adolescentes em Vitória da Conquista</title>
+        <link rel="icon" href="favicon.webp" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Sou Psicóloga Clínica (CRP 03/21079), graduada pela Universidade Federal de Sergipe (UFS) e Mestre em Psicologia pela mesma instituição." />
+        <meta name="keywords" content="psicóloga infantil,psicologia infantil,psicologia infantojuvenil,psicoterapia criança,psicoterapia adolescente,saúde criança,saúde adolescente,terapia,desenvolvimento humano,saúde mental,vitória da conquista" />
+        <meta name="LANGUAGE" content="pt-br" />
+        <meta name="ROBOT" content="Index,Follow" />
+        <meta name="author" content="Brenda Fernanda" />
+
       </Head>
 
 
-      <header className={(navbarClass ? 'active' : '') + ' navbar lg:px-16 px-6 flex flex-wrap items-center fixed w-full z-40'}>
+      <header className={(navbarClass ? 'active' : '') + ' navbar lg:px-16 px-2 xm:px-5 flex flex-wrap items-center fixed w-full z-40'}>
         <div className="flex-1 flex justify-between items-center">
-          <a href="">
-            <Image src="/images/logo.png" className="header-logo" width={70} height={70} priority={true} />
+          <a href="/">
+            <Image src="/images/logo.png" className="header-logo" alt="Logo" width={70} height={70} priority={true} />
           </a>
           <input className="hidden" type="checkbox" id="menu-toggle" />
 
@@ -74,7 +82,7 @@ export default function Home({ instagramPosts }) {
                 <li><a className="nav-link lg:p-4 py-3 px-0 block border-b-2 border-transparent mx-3 "
                   href="#services">Serviços</a></li>
                 <li>
-                  <a onClick={openContactModal} className="cta flex font-normal  py-3 px-5  block border-b-2 border-transparent bg-complementary rounded-full  focus:outline-none"
+                  <a onClick={openContactModal} className="cta flex text-center font-normal  py-2 xm:py-3 px-3 xm:px-5  block border-b-2 border-transparent bg-complementary rounded-full  focus:outline-none"
                   >Vamos conversar</a>
                 </li>
               </ul>
@@ -210,7 +218,7 @@ export default function Home({ instagramPosts }) {
       </section>
 
 
-      <section id="rodape" className="antialiased flex flex-col md:flex-row items-center justify-center  py-8 xm:py-10 md:pd-12 lg:py-16 xxl:py-20 px-4 mr-6 xl:mr-16 2xl:py-28">
+      <section id="rodape" className="antialiased flex flex-col md:flex-row items-center justify-center mt-10 sm:mt-5 md:mt-0 py-8 xm:py-10 md:pd-12 lg:py-16 xxl:py-20 px-4 mr-6 xl:mr-16 2xl:py-28">
         <div className="flex flex-col md:w-5/12 xxl:w-4/12 mx-5 md:mx-0">
           <h4 className="section-title font-extrabold color-white">Tem alguma dúvida?</h4>
           <p className="color-white font-medium mt-4">Entre em contato para saber mais sobre locais <br className="hidden xxl:inline"></br> de atendimento, agenda e preços.</p>
