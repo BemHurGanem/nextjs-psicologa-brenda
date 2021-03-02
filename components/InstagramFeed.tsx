@@ -7,7 +7,7 @@ export function InstagramFeed({ instagramPosts }) {
         <>
             <div className="w-11/12 lg:w-9/12 mt-9 md:mt-5 xxl:mt-0 xxl:w-3/5 mb-16 items-center flex flex-row">
                 <a target="blank" href="https://www.instagram.com/brendafernandapsi/">
-                    <h4 className="section-title font-extrabold nav-link"> Me siga no Instagram</h4>
+                    <h1 className="section-title font-extrabold nav-link"> Me siga no Instagram</h1>
                 </a>
                 <span className="colored-line flex ml-1 md:ml-3"></span>
             </div>
@@ -24,15 +24,7 @@ export function InstagramFeed({ instagramPosts }) {
                                 key={i}
                                 aria-label="view image on Instagram"
                             >
-
-                                <img
-                                    src={node.thumbnail_src}
-                                    alt={
-                                        node.edge_media_to_caption.edges[0].node.text
-                                            .replace(/(#\w+)+/g, "")
-                                            .trim()
-                                    }
-                                 /> 
+                            <Image src={node.thumbnail_src}  alt="Imagem de um post do Instagram" width={353} height={353} quality={100} />
                             </a>
                         </div>
                     )

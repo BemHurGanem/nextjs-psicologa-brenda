@@ -17,7 +17,7 @@ export function ServiceCard(props:ServiceCardProps) {
                     className="w-full h-auto" width={600} height={525}></Image>
             </div>
             <div className="text-center mt-9">
-                <h5 className="font-bold color-primary text-2xl" >{props.title_1}<br></br>{props.title_2}</h5>
+                <h2 className="font-bold color-primary text-2xl" >{props.title_1}<br></br>{props.title_2}</h2>
             </div>
             {props.children}
         </div>

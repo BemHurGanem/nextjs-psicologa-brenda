@@ -18,8 +18,6 @@ export async function getStaticProps(context) {
 
   const posts = json.data.user.edge_owner_to_timeline_media.edges;
 
-  // console.log(posts);
-
   return {
     props: {
       instagramPosts: posts
@@ -38,7 +36,7 @@ export default function Home({ instagramPosts }) {
     function changeNavBarOnScroll() {
       setNavbarClass(window.scrollY >= 80);
     }
-
+    
     window.addEventListener("scroll", changeNavBarOnScroll);
 
     return () => {
@@ -196,7 +194,7 @@ export default function Home({ instagramPosts }) {
                   className="w-full h-auto" width={342} height={319} quality="100"></Image>
               </div>
               <div className="flex w-4/6 md:w-full items-center ml-2 md:ml-0">
-                <h4 className="section-title font-extrabold color-primary">Sobre mim</h4>
+                <h1 className="section-title font-extrabold color-primary">Sobre mim</h1>
               </div>
 
             </div>
@@ -220,7 +218,7 @@ export default function Home({ instagramPosts }) {
 
       <section id="rodape" className="antialiased flex flex-col md:flex-row items-center justify-center mt-10 sm:mt-5 md:mt-0 py-8 xm:py-10 md:pd-12 lg:py-16 xxl:py-20 px-4 mr-6 xl:mr-16 2xl:py-28">
         <div className="flex flex-col md:w-5/12 xxl:w-4/12 mx-5 md:mx-0">
-          <h4 className="section-title font-extrabold color-white">Tem alguma dúvida?</h4>
+          <h1 className="section-title font-extrabold color-white">Tem alguma dúvida?</h1>
           <p className="color-white font-medium mt-4">Entre em contato para saber mais sobre locais <br className="hidden xxl:inline"></br> de atendimento, agenda e preços.</p>
         </div>
         <div className="flex flex-col md:w-6/12 xxl:w-5/12 justify-center items-center mt-10 xl:mt-0">
