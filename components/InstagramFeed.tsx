@@ -18,11 +18,12 @@ export function InstagramFeed({ instagramPosts }) {
                 {instagramPosts.map(({ node }, i) => {
                     return (
 
-                        <div className="instagram-card mb-0" key={i}>
+                        <div className="instagram-card mb-0 text-center" key={i}>
                             <a
                                 href={`https://www.instagram.com/p/${node.shortcode}`}
                                 key={i}
                                 aria-label="view image on Instagram"
+                                rel="noopener noreferrer"
                             >
                             <Image src={node.thumbnail_src}  alt="Imagem de um post do Instagram" width={353} height={353} quality={100} />
                             </a>
