@@ -130,7 +130,7 @@ export default function Home({ instagramPosts }) {
 
         <div className="w-full mb-4 md:mb-16 text-center  items-center justify-center flex">
           <span className="colored-line mr-3"></span>
-          <h4 className="section-title font-extrabold color-primary"> Meus Serviços</h4>
+          <h1 className="section-title font-extrabold color-primary"> Meus Serviços</h1>
           <span className="colored-line ml-3"></span>
         </div>
 
