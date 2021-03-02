@@ -23,12 +23,12 @@ export function ContactModal({ modalOpen, setModalOpen }: ServiceCardProps) {
     }, [modalOpen]);
 
     return (
-        modalOpen && < >
+         < >
             {/* <div className={(modalOpen ? 'fixed' : 'hidden') + ' z-50 inset-0 overflow-y-auto animated fadeIn'}> */}
-            <div className={'fixed z-50 inset-0 overflow-y-auto  modal ' + (modalOpen2 ? '' : 'opacity-0')}>
+            <div className={(modalOpen ? 'fixed ' : 'hidden ') +' z-50 inset-0 overflow-y-auto  modal ' + (modalOpen2 ? '' : 'opacity-0')}>
                 <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
 
-                    <div className="fixed inset-0 transition-opacity duration-700 ease-in-out" aria-hidden="true">
+                    <div className={(modalOpen ? 'fixed ' : 'hidden ') +'inset-0 transition-opacity duration-700 ease-in-out'} aria-hidden="true">
                         <div className="absolute inset-0 bg-gray-500 opacity-75" onClick={closeContactModal} ></div>
                     </div>
 
