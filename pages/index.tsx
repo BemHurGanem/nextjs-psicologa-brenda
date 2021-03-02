@@ -109,7 +109,7 @@ export default function Home({ instagramPosts }) {
           </div>
           <div className="presentation-img-container-mobile">
             <div className=" flex md:hidden z">
-              <Image src="/images/brenda-mobile.png" className="presentation-img-mobile" alt="Brenda Fernanda" width={317} height={618} priority={true} quality={100} />
+              <Image src="/images/brenda-mobile.png" className="presentation-img-mobile" alt="Brenda Fernanda" width={317} height={618} priority={false} quality={100} loading="eager" />
             </div>
           </div>
 
