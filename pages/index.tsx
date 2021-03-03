@@ -51,11 +51,11 @@ export default function Home({ instagramPosts }) {
   return (
     <div className=" antialiased">
       <Head>
-        <title>Brenda Fernanda - Psicóloga de Crianças e Adolescentes em Vitória da Conquista</title>
+        <title>Brenda Fernanda - Psicóloga de Crianças e Adolescentes</title>
         <link rel="icon" href="favicon.webp" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content=" Sou Psicóloga Clínica e Mestre em Psicologia e trabalho com psicoterapia para infantojuvenil. Meu principal objetivo é promover saúde mental para crianças e adolescentes!" />
+        <meta name="description" content=" Sou Psicóloga e Mestre em Psicologia e trabalho com psicoterapia para infantojuvenil. Meu principal objetivo é promover saúde mental para crianças e adolescentes!" />
         <meta name="keywords" content="psicóloga infantil,psicologia infantil,psicologia infantojuvenil,psicoterapia criança,psicoterapia adolescente,saúde criança,saúde adolescente,terapia,desenvolvimento humano,saúde mental,vitória da conquista" />
         <meta name="LANGUAGE" content="pt-br" />
         <meta name="ROBOT" content="Index,Follow" />
