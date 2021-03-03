@@ -197,7 +197,7 @@ a {
     background-color: var(--complementary-dark);
 }
 
-#services {
+#servicos {
     background-image: url(/images/services/background-waves.svg);
     background-repeat: no-repeat;
     background-position-y: bottom;
@@ -233,7 +233,7 @@ a {
     margin-left: auto;
 }
 
-#about {
+#sobre {
     background-color: var(--complementary-light);
 }
 

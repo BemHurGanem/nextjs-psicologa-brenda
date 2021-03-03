@@ -22,7 +22,7 @@ export async function getStaticProps(context) {
     props: {
       instagramPosts: posts
     },
-    revalidate: 86400
+    revalidate: 33200
   }
 
 }
@@ -43,6 +43,26 @@ export default function Home({ instagramPosts }) {
       window.removeEventListener("scroll", changeNavBarOnScroll);
     }
   }, []);
+
+  function scrollToAbout(event): void {
+    event.preventDefault();
+    const id = 'sobre';
+    const yOffset = -60;
+    const element = document.getElementById(id);
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+
+  function scrollToService(event): void {
+    event.preventDefault();
+    const id = 'servicos';
+    const yOffset = -20;
+    const element = document.getElementById(id);
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
 
   function openContactModal() {
     setModalOpen(true);
@@ -75,10 +95,10 @@ export default function Home({ instagramPosts }) {
             <nav>
               <ul
                 className="nav-items flex items-center justify-between text-base text-gray-700  font-bold">
-                <li><a className="nav-link lg:p-4 py-3 px-0 hidden md:block border-b-2 border-transparent mx-2"
-                  href="#about">Sobre mim</a></li>
-                <li><a className="nav-link lg:p-4 py-3 px-0 block border-b-2 border-transparent mx-3 "
-                  href="#services">Serviços</a></li>
+                <li><a className="nav-link lg:p-4 py-3 px-0 hidden md:block border-b-2 border-transparent mx-2" href="#sobre"
+                  onClick={scrollToAbout}>Sobre mim</a></li>
+                <li><a  onClick={scrollToService} className="nav-link lg:p-4 py-3 px-0 block border-b-2 border-transparent mx-3 "
+                  href="#servicos">Serviços</a></li>
                 <li>
                   <a onClick={openContactModal} className="cta flex text-center font-normal  py-2 xm:py-3 px-3 xm:px-5  block border-b-2 border-transparent bg-complementary rounded-full  focus:outline-none"
                   >Vamos conversar!</a>
@@ -124,7 +144,7 @@ export default function Home({ instagramPosts }) {
 
       </section>
 
-      <section id="services" className="w-full flex antialiased flex-col  items-center justify-center py-8 xm:py-10 my:pd-12 lg:py-20">
+      <section id="servicos" className="w-full flex antialiased flex-col  items-center justify-center py-8 xm:py-10 my:pd-12 lg:py-20">
 
         <div className="w-full mb-4 md:mb-16 text-center  items-center justify-center flex">
           <span className="colored-line mr-3"></span>
@@ -165,14 +185,14 @@ export default function Home({ instagramPosts }) {
 
           <ServiceCard title_1={'Atendimento'} title_2={'Social'} image="/images/services/atendimento-social.png" imageAlt="Duas pessoas conversando sentadas">
             <div className=" mt-9">
-            <p className=" mt-9 inline">
-              Visa atender pessoas com renda mais baixa que não podem pagar o valor completo da sessão.
+              <p className=" mt-9 inline">
+                Visa atender pessoas com renda mais baixa que não podem pagar o valor completo da sessão.
               </p>
               <p className="mt-9 inline font-bold color-complementary">
-              &nbsp;Pode ser no formato presencial ou online.
+                &nbsp;Pode ser no formato presencial ou online.
             </p>
             </div>
-         
+
             <div className=" mt-6">
               <p className="inline">
                 Necessário comprovar renda.
@@ -186,7 +206,7 @@ export default function Home({ instagramPosts }) {
       </section>
 
 
-      <section id="about" className="w-full flex antialiased  items-center justify-center py-8 xm:py-10 my:pd-12 lg:py-16 px-4">
+      <section id="sobre" className="w-full flex antialiased  items-center justify-center py-8 xm:py-10 my:pd-12 lg:py-16 px-4">
         <div className="w-11/12 lg:w-9/12 xxl:w-3/5 flex">
           <div className="hidden md:flex w-2/6 items-center justify-center mr-6">
             <Image src="/images/about/brenda.png" alt="Rosto de Brenda"
@@ -235,6 +255,7 @@ export default function Home({ instagramPosts }) {
               <span className="colored-line flex mr-2 w-10"></span>
               <p className="color-white font-medium text-xs">Feito com <FontAwesomeIcon icon={faHeart} size="sm" className="inline" /> em Vitória da Conquista</p>
             </div>
+            <p className="color-white font-medium text-xs">Por <a className="nav-link text-white" target="_blank" rel="noopener noreferrer" href="mailto:bemhur.ganem@gmail.com">Bem Hur Ganem</a></p>
           </div>
 
         </div>
