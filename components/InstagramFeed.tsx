@@ -6,7 +6,7 @@ export function InstagramFeed({ instagramPosts }) {
     return (
         <>
             <div className="w-11/12 lg:w-9/12 mt-9 md:mt-5 xxl:mt-0 xxl:w-3/5 mb-16 items-center flex flex-row">
-                <a target="blank" href="https://www.instagram.com/brendafernandapsi/">
+                <a target="blank" href="https://www.instagram.com/brendafernandapsi/"  rel="noopener noreferrer"  aria-label="Me siga no Instagram">
                     <h1 className="section-title font-extrabold nav-link"> Me siga no Instagram</h1>
                 </a>
                 <span className="colored-line flex ml-1 md:ml-3"></span>

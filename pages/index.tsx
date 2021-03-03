@@ -55,7 +55,7 @@ export default function Home({ instagramPosts }) {
         <link rel="icon" href="favicon.webp" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="Sou Psicóloga Clínica (CRP 03/21079), graduada pela Universidade Federal de Sergipe (UFS) e Mestre em Psicologia pela mesma instituição." />
+        <meta name="description" content=" Sou Psicóloga Clínica e Mestre em Psicologia e trabalho com psicoterapia para infantojuvenil. Meu principal objetivo é promover saúde mental para crianças e adolescentes!" />
         <meta name="keywords" content="psicóloga infantil,psicologia infantil,psicologia infantojuvenil,psicoterapia criança,psicoterapia adolescente,saúde criança,saúde adolescente,terapia,desenvolvimento humano,saúde mental,vitória da conquista" />
         <meta name="LANGUAGE" content="pt-br" />
         <meta name="ROBOT" content="Index,Follow" />
@@ -81,7 +81,7 @@ export default function Home({ instagramPosts }) {
                   href="#services">Serviços</a></li>
                 <li>
                   <a onClick={openContactModal} className="cta flex text-center font-normal  py-2 xm:py-3 px-3 xm:px-5  block border-b-2 border-transparent bg-complementary rounded-full  focus:outline-none"
-                  >Vamos conversar</a>
+                  >Vamos conversar!</a>
                 </li>
               </ul>
             </nav>
@@ -164,9 +164,15 @@ export default function Home({ instagramPosts }) {
           </ServiceCard>
 
           <ServiceCard title_1={'Atendimento'} title_2={'Social'} image="/images/services/atendimento-social.png" imageAlt="Duas pessoas conversando sentadas">
-            <p className=" mt-9">
-              Visa atender pessoas com renda mais baixa que não podem pagar o valor completo da sessão. Pode ser no formato presencial ou online.
+            <div className=" mt-9">
+            <p className=" mt-9 inline">
+              Visa atender pessoas com renda mais baixa que não podem pagar o valor completo da sessão.
               </p>
+              <p className="mt-9 inline font-bold color-complementary">
+              &nbsp;Pode ser no formato presencial ou online.
+            </p>
+            </div>
+         
             <div className=" mt-6">
               <p className="inline">
                 Necessário comprovar renda.
@@ -224,7 +230,7 @@ export default function Home({ instagramPosts }) {
         <div className="flex flex-col md:w-6/12 xxl:w-5/12 justify-center items-center mt-10 xl:mt-0">
           <div className="flex flex-col justify-center items-end">
             <a onClick={openContactModal} className="cta  text-xl font-medium  text-center  py-5 px-10  block border-b-2 border-transparent bg-complementary rounded-full  focus:outline-none"
-            >Vamos conversar</a>
+            >Vamos conversar!</a>
             <div className="flex mt-4 justify-center items-center">
               <span className="colored-line flex mr-2 w-10"></span>
               <p className="color-white font-medium text-xs">Feito com <FontAwesomeIcon icon={faHeart} size="sm" className="inline" /> em Vitória da Conquista</p>
