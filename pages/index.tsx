@@ -227,7 +227,7 @@ export default function Home({ instagramPosts }) {
             >Vamos conversar</a>
             <div className="flex mt-4 justify-center items-center">
               <span className="colored-line flex mr-2 w-10"></span>
-              <p className="color-white font-medium text-xs">Feito  <FontAwesomeIcon icon={faHeart} size="sm" className="inline" /> em Vitória da Conquista</p>
+              <p className="color-white font-medium text-xs">Feito com <FontAwesomeIcon icon={faHeart} size="sm" className="inline" /> em Vitória da Conquista</p>
             </div>
           </div>
 
