@@ -17,6 +17,7 @@ class MyDocument extends Document {
               `,
           }}
         />
+        <meta name="google-site-verification" content="bCgF986MCL-BnVaW2bc95HNwlSoiKdUD1UTTXUzpPco" />
         <Head />
         <body>
           <Main />
