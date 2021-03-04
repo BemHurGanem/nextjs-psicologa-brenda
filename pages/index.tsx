@@ -80,7 +80,7 @@ export default function Home({ instagramPosts }) {
         <meta name="LANGUAGE" content="pt-br" />
         <meta name="ROBOT" content="Index,Follow" />
         <meta name="author" content="Brenda Fernanda" />
-
+        <meta name="google-site-verification" content="bCgF986MCL-BnVaW2bc95HNwlSoiKdUD1UTTXUzpPco" />
       </Head>
 
 
